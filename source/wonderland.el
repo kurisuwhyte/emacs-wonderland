@@ -2,7 +2,7 @@
 
 ;; Copyright (c) 2013 Christina Whyte <kurisu.whyte@gmail.com>
 
-;; Version 0.1.0
+;; Version: 0.1.0
 ;; Package-Requires: ((dash "2.0.0") (dash-functional "1.0.0") (multi "1.0.1") (emacs "24"))
 ;; Keywords: configuration profile wonderland
 ;; Author: Christina Whyte <kurisu.whyte@gmail.com>
