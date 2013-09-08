@@ -6,7 +6,7 @@
 ;; Package-Requires: ((dash "2.0.0") (dash-functional "1.0.0") (multi "1.0.1") (emacs "24"))
 ;; Keywords: configuration profile wonderland
 ;; Author: Christina Whyte <kurisu.whyte@gmail.com>
-;; URL: http://github.com/kurisuwhyte/wonderland
+;; URL: http://github.com/kurisuwhyte/emacs-wonderland
 
 ;; This file is not part of GNU Emacs.
 
@@ -33,7 +33,7 @@
 
 ;;; Commentary
 ;;
-;; See README.md (or http://github.com/wonderland/wonderland#readme)
+;; See README.md (or http://github.com/kurisuwhyte/emacs-wonderland#readme)
 
 ;;; Installation
 
