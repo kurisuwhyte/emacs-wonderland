@@ -17,19 +17,30 @@ but for Emacsen ;)
 (require 'wonderland)
 
 (wonderland/defeature paredit
+  ;; Installs a package using package-install
   (package paredit))
 
 (wonderland/defeature clojure
+  ;; Declares a dependency on some other feature
   (need paredit)
+
   (package clojure-mode)
 
+  ;; Sets some state
   (def clojure-mode-font-lock-comment-sexp t)
 
+  ;; Adds a hook
   (hook clojure-mode-hook (lambda() (paredit-mode +1)))
+
+  ;; Defines an auto-mode
   (mode clojure-mode "\\.clj$")
 
+  ;; Defines a keymap for the mode (use 'global to define a global keymap)
   (keymap clojure-mode
           ("C-c v" . slime-eval-buffer)))
+
+;; Loads the clojure feature (and the paredit dependency)
+(wonderland/load-feature 'clojure) 
 ```
 
 ## Installation
