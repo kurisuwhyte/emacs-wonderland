@@ -282,6 +282,20 @@
                         "" symbols)))
 
 
+;;;; Emacs syntax/indentation, etc ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(put 'wonderland/defeature 'lisp-indent-function 1)
+
+(eval-after-load "lisp-mode"
+  '(progn
+     (font-lock-add-keywords 'emacs-lisp-mode
+                             '(("\\<\\(wonderland/defeature\\)\\>" . 'font-lock-keyword-face)))
+     (--each (buffer-list)
+       (with-current-buffer it
+         (when (and (eq major-mode 'emacs-lisp-mode)
+                    (boundp 'font-lock-mode)
+                    font-lock-mode)
+           (font-lock-refresh-defaults))))))
+
 
 (provide 'wonderland)
 ;;; wonderland.el ends here
