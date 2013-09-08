@@ -16,13 +16,20 @@ but for Emacsen ;)
 ```el
 (require 'wonderland)
 
-(wonderland/defeature markdown
-  (package markdown-mode)
+(wonderland/defeature paredit
+  (package paredit))
 
-  (def markdown-command		        "pandoc -r markdown -w html5")
-  (def markdown-link-space-sub-char "-")
+(wonderland/defeature clojure
+  (need paredit)
+  (package clojure-mode)
 
-  (mode markdown-mode "\\.md$"))
+  (def clojure-mode-font-lock-comment-sexp t)
+
+  (hook clojure-mode-hook (lambda() (paredit-mode +1)))
+  (mode clojure-mode "\\.clj$")
+
+  (keymap clojure-mode
+          ("C-c v" . slime-eval-buffer)))
 ```
 
 ## Installation
