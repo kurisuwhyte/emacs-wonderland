@@ -45,7 +45,7 @@ but for Emacsen ;)
 
 ## Installation
 
-You can grab it from [marmalade](http://marmalade-repo.org):
+You can grab it from [marmalade](http://marmalade-repo.org) or [MELPA](http://melpa.milkbox.net/):
 
     M-x package-install wonderland
     
