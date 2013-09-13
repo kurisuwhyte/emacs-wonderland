@@ -2,8 +2,8 @@
 
 ;; Copyright (c) 2013 Christina Whyte <kurisu.whyte@gmail.com>
 
-;; Version: 0.1.0
-;; Package-Requires: ((dash "2.0.0") (dash-functional "1.0.0") (multi "1.0.1") (emacs "24"))
+;; Version: 0.1.1
+;; Package-Requires: ((dash "2.0.0") (dash-functional "1.0.0") (multi "2.0.0") (emacs "24"))
 ;; Keywords: configuration profile wonderland
 ;; Author: Christina Whyte <kurisu.whyte@gmail.com>
 ;; URL: http://github.com/kurisuwhyte/emacs-wonderland
@@ -154,7 +154,7 @@
 
 (defmulti wonderland/-package-load (pkg) (wonderland-package-method pkg))
 
-(defmethod wonderland/-package-load 'elpa (pkg)
+(defmulti-method wonderland/-package-load 'elpa (pkg)
   (let ((id (wonderland-package-id pkg)))
     (unless (package-installed-p id)
       (package-install id)
