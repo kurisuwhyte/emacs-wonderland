@@ -44,6 +44,7 @@
 (require 'dash)
 (require 'dash-functional)
 (require 'multi)
+(require 'package)
 
 
 ;;;; State ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
