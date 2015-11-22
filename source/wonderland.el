@@ -3,7 +3,7 @@
 ;; Copyright (c) 2013 Christina Whyte <kurisu.whyte@gmail.com>
 
 ;; Version: 0.1.1
-;; Package-Requires: ((dash "2.0.0") (dash-functional "1.0.0") (multi "2.0.0") (emacs "24"))
+;; Package-Requires: ((dash "2.0.0") (dash-functional "1.0.0") (multi "2.0.0") (emacs "24") (cl-lib "0.5"))
 ;; Keywords: configuration profile wonderland
 ;; Author: Christina Whyte <kurisu.whyte@gmail.com>
 ;; URL: http://github.com/kurisuwhyte/emacs-wonderland
@@ -40,7 +40,7 @@
 ;; ( TODO: ... )
 
 ;;; Code:
-(eval-when-compile (require 'cl))
+(require 'cl-lib)
 (require 'dash)
 (require 'dash-functional)
 (require 'multi)
@@ -53,7 +53,7 @@
 
 ;;;; API ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defmacro wonderland/defeature (name &rest forms)
-  (let ((feature (gensym)))
+  (let ((feature (cl-gensym)))
     `(let ((,feature (wonderland/-feature-from-forms ',name ',forms)))
        (puthash ',name ,feature wonderland/features)
        ,feature)))
