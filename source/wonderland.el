@@ -3,7 +3,7 @@
 ;; Copyright (c) 2013 Christina Whyte <kurisu.whyte@gmail.com>
 
 ;; Version: 0.1.1
-;; Package-Requires: ((dash "2.0.0") (dash-functional "1.0.0") (multi "2.0.0") (emacs "24"))
+;; Package-Requires: ((dash "2.18.0") (multi "2.0.0") (emacs "24"))
 ;; Keywords: configuration profile wonderland
 ;; Author: Christina Whyte <kurisu.whyte@gmail.com>
 ;; URL: http://github.com/kurisuwhyte/emacs-wonderland
@@ -42,7 +42,6 @@
 ;;; Code:
 (eval-when-compile (require 'cl))
 (require 'dash)
-(require 'dash-functional)
 (require 'multi)
 
 
